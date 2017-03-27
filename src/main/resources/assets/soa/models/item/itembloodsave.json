@@ -1,0 +1,13 @@
+{
+    "parent": "item/generated",
+    "textures": {
+        "layer0": "soa:items/itembloodsave"
+    },
+  "overrides": [
+    { "predicate": { "bloodsave": 0 },  "model": "soa:item/itembloodsave"   },
+    { "predicate": { "bloodsave": 5 },  "model": "soa:item/itembloodsave_1" },
+    { "predicate": { "bloodsave": 10 }, "model": "soa:item/itembloodsave_2" },
+    { "predicate": { "bloodsave": 15 }, "model": "soa:item/itembloodsave_3" },
+    { "predicate": { "bloodsave": 20 }, "model": "soa:item/itembloodsave_4" }
+  ]
+}
