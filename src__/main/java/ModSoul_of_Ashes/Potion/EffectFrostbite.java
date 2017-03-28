@@ -1,4 +1,4 @@
-package ModSoul_of_Ashes.Potion.Frostbite;
+package ModSoul_of_Ashes.Potion;
 
 import ModSoul_of_Ashes.init.ModDamagecause;
 import ModSoul_of_Ashes.init.ModPotion;

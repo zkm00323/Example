@@ -1,13 +1,7 @@
 package ModSoul_of_Ashes;
 
-import ModSoul_of_Ashes.Config.ModConfig;
-import ModSoul_of_Ashes.Potion.Frostbite.PotionFrostbite;
-import ModSoul_of_Ashes.init.ModAchivenent;
-import ModSoul_of_Ashes.init.ModEntity;
-import ModSoul_of_Ashes.init.ModItems;
-import ModSoul_of_Ashes.init.ModParticle;
-import ModSoul_of_Ashes.init.ModPotion;
-import ModSoul_of_Ashes.init.Potionregiser;
+import ModSoul_of_Ashes.Potion.PotionFrostbite;
+import ModSoul_of_Ashes.init.*;
 import ModSoul_of_Ashes.proxy.CommonProxy;
 import net.minecraft.potion.Potion;
 import net.minecraftforge.fml.common.Mod;
@@ -35,8 +29,8 @@ public class Main {
 		ModItems.init();
 		ModEntity.init();
 		ModAchivenent.init();
-		ModConfig.init();
 		proxy.init();
+
 	}
 	
 	@EventHandler

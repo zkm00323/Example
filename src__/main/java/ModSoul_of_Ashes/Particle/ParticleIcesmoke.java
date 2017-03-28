@@ -1,6 +1,5 @@
 package ModSoul_of_Ashes.Particle;
 
-import ModSoul_of_Ashes.init.ModParticle;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.particle.Particle;
 import net.minecraft.client.renderer.VertexBuffer;
@@ -10,7 +9,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class ParticleIcesmoke extends Particle{
-    public static final ResourceLocation icon = ModParticle.ICE_SMOKE;
+    public static final ResourceLocation icon = new ResourceLocation("soa:particle/icesmoke");
 
     public ParticleIcesmoke(World worldIn, double posXIn, double posYIn, double posZIn, double velocityX, double velocityY, double velocityZ) {
             super(worldIn, posXIn, posYIn, posZIn);

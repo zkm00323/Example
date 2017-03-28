@@ -1,6 +1,5 @@
 package ModSoul_of_Ashes.Item;
 
-import ModSoul_of_Ashes.Potion.Frostbite.EffectFrostbite;
 import ModSoul_of_Ashes.Throwable.Entity.EntityIcebullet;
 import ModSoul_of_Ashes.init.ModAchivenent;
 import ModSoul_of_Ashes.init.ModPotion;
@@ -56,7 +55,8 @@ public class ItemIceicon extends Item{
 	            world.spawnEntityInWorld(icebullet);
 				break;
 			case 1:
-				player.addPotionEffect(new EffectFrostbite(player,30*20,0));
+				player.addPotionEffect(new PotionEffect(ModPotion.frostbite,30,0));
+				System.out.println("hello");
 				break;
 			case 2:
 				

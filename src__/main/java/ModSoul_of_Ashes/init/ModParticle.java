@@ -11,8 +11,6 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class ModParticle {
-	
-	public static final ResourceLocation ICE_SMOKE = new ResourceLocation("soa:particle/icesmoke");
 
 	public static void init() {
 		new ModParticle();
@@ -24,7 +22,7 @@ public class ModParticle {
 
 	@SubscribeEvent
 	public void TexturestitcherEventPre(TextureStitchEvent.Pre event) {
-		ResourceLocation icon = ICE_SMOKE;
+		ResourceLocation icon = new ResourceLocation("soa:particle/icesmoke");
 		event.getMap().registerSprite(icon);
 	}
 

@@ -1,4 +1,4 @@
-package ModSoul_of_Ashes.Potion.Frostbite;
+package ModSoul_of_Ashes.Potion;
 
 import java.awt.Color;
 

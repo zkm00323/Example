@@ -6,7 +6,6 @@ import java.util.Random;
 import ModSoul_of_Ashes.Main;
 import ModSoul_of_Ashes.Item.TexturesGetter.ItemBloodsaveTextures;
 import net.minecraft.block.state.IBlockState;
-import net.minecraft.client.resources.I18n;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -46,7 +45,7 @@ public class ItemBloodsave extends Item{
 						item.getTagCompound().setInteger("bloodsave",(item.getTagCompound().getInteger("bloodsave")-(int)(player.getMaxHealth()-player.getHealth())));
 						player.setHealth(player.getMaxHealth()); 
 					}	
-					((EntityPlayer) player).addChatComponentMessage(new TextComponentString(I18n.format("item.itembloodsave.bloodsave")+":"+item.getTagCompound().getInteger("bloodsave")), true);
+					((EntityPlayer) player).addChatComponentMessage(new TextComponentString("bloodsave:"+item.getTagCompound().getInteger("bloodsave")), true);
 				}  
 	    	}
 	    	return super.onItemUseFinish(item, world, player);
@@ -74,11 +73,11 @@ public class ItemBloodsave extends Item{
 	    			int damage = new Random().nextInt(10)+1;      		
 	    			int save = item.getTagCompound().getInteger("bloodsave");
 	    			player.setHealth(player.isCreative() ? player.getHealth()-0: player.getHealth()-damage);
-	    			((EntityPlayer) player).addChatComponentMessage(new TextComponentString(I18n.format("item.itembloodsave.bloodsave")+":"+item.getTagCompound().getInteger("bloodsave")+"+"+damage/2), true);
+	    			((EntityPlayer) player).addChatComponentMessage(new TextComponentString("bloodsave:"+item.getTagCompound().getInteger("bloodsave")+"+"+damage/2), true);
 	    			item.getTagCompound().setInteger("bloodsave", save + damage/2 > 20 ? 20 : save + damage/2);     
 	    			player.stopActiveHand();
 	    			if(item.getTagCompound().getInteger("bloodsave")==20){
-	    				((EntityPlayer) player).addChatComponentMessage(new TextComponentString(I18n.format("item.itembloodsave.bloodsave")+":"+"20"), true);
+	    				((EntityPlayer) player).addChatComponentMessage(new TextComponentString("bloodsave:20"), true);
 	    			}
 	    		}else if(!player.isSneaking() && item.getTagCompound().getInteger("bloodsave")>0){
 	    			player.setActiveHand(handIn);
@@ -91,7 +90,7 @@ public class ItemBloodsave extends Item{
 	    public void addInformation(ItemStack stack, EntityPlayer playerIn, List<String> tooltip, boolean advanced) {
 	        NBTTagCompound nbt = stack.getTagCompound();
 	        if (nbt != null && nbt.hasKey("bloodsave"))
-	        tooltip.add(I18n.format("item.itembloodsave.bloodsave")+": " + nbt.getInteger("bloodsave"));
+	        tooltip.add("bloodsave: " + nbt.getInteger("bloodsave"));
 	    	super.addInformation(stack, playerIn, tooltip, advanced);
 	    }
 }
